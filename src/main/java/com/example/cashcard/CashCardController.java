@@ -1,10 +1,7 @@
 package com.example.cashcard;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -24,5 +21,10 @@ public class CashCardController {
             return ResponseEntity.ok(cashCardOptional.get());
         }
         return ResponseEntity.notFound().build();
+    }
+
+    @PostMapping
+    private ResponseEntity<Void> createCashCard(){
+        return null;
     }
 }
